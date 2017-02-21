@@ -1,0 +1,160 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Configuration Management Camp Gent 2017</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section><h1>cfgmgmtcamp</h1><br><h2>Gent 2017</h2></section>
+				<section data-markdown>
+				    <script type="text/template">
+						## @cfgmgmtcamp
+
+						* Free Conference
+						* 6th - 7th February 2017
+						* Gent, Belgium
+						* ~500 participants
+				    </script>
+				</section>
+				<section data-markdown>
+				    <script type="text/template">
+					## What is it all about
+					* Tooling
+					  * Chef, Puppet, Ansible, ...
+					* Containerization
+					  * Docker, Kubernetes, ...
+					* DevOps Culture
+					  * Collaboration, Teams, People, ...
+				    </script>
+				</section>
+				<section data-markdown>
+				    <script type="text/template">
+					## Is CM a solved problem?
+
+					* Core functionality very well solved
+						* files, templates, packages...
+					* Unresolved problems / current research
+						* masterless setups
+						* distributed systems
+				    </script>
+				</section>
+				<section data-markdown>
+				    <script type="text/template">
+					## Resilient Sytems require Resilient People
+					* Resilience as a set of skills that can be learned
+					* Resilient teams
+						* support each other
+						* trust people and give them autonomy
+						* provide a sense of purpose
+					* My own resilience
+						* take breaks
+						* observer your thoughts and rephrase them
+						* e.g. "I am stressed" &longrightarrow; "I feel stressed bc of"
+				    </script>
+				</section>
+				<section data-markdown>
+				    <script type="text/template">
+					## Well of Despair
+					<img height="500" src="images/well-of-despair.png">
+				    </script>
+				</section>
+				<section data-markdown>
+					<script type="text/template">
+					## Cloud Native in the Enterprise
+					* survey based statistics
+					* there is no single "new stack" instead there is an infinite array of stacks
+					* Q1 2015: 30 % of asked people no plans with containers, 14% adoption
+						* lack of skills, no business benefits
+					* Q4 2016: 60% claim to run containers
+						* still very small percentage of stuff running in containers
+					* doing containers alone is not sufficient
+						* at some point you have to manage them
+						* today: Kubernetes is clearly the answer
+					</script>
+				</section>
+				<section data-markdown>
+					<script type="text/template">
+					## Implementing Infrastructure as Code
+					<img height="500px" src="images/iac.jpg">
+					</script>
+				</section>
+				<section data-markdown>
+				    <script type="text/template">
+					## Implementing Infrastructure as Code
+					* Plan for change
+					* Group things together that change together
+					* Release small batches
+					* Automate all the f* * * * * things
+				    </script>
+				</section>
+				<section data-markdown>
+				    <script type="text/template">
+					## Testing with Containers
+					* Containers are great for testing
+						* Security does not matter here
+					* Running tests in containers is faster than in VMs
+					* Pre-build containers with required tooling
+					* Some caveats
+						* multi-processing in containers is no problem
+						* make full VM out of container for infrastructure testing (e.g. systemd)
+						* sacrifice security in containers for testing
+				    </script>
+				</section>
+				<section data-markdown>
+				    <script type="text/template">
+					## Summary
+					* Broad audience "does not have our problems"
+					* CF tools are not well represented (only 1 presentation)
+					* Get a feeling for trends
+					* Good for socializing (Stark & Wayne, ThoughtWorks)
+				    </script>
+				</section>
+				<section data-markdown>
+				    <script type="text/template">
+					## Resources & Links
+
+					* [Personal summary on Github](https://gist.github.com/michaellihs/b6c38898ad8a98dcd7c183238592166c)
+					* [Youtube playlist of main track](https://www.youtube.com/playlist?list=PLBZBIkixHEidnVKFIxogd3Qf-ai3RKTJ_)
+				    </script>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
